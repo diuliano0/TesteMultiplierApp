@@ -1,0 +1,186 @@
+<ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary">
+            <ion-menu-button slot="icon-only"></ion-menu-button>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons class="fim-botoes" slot="end">
+        <ion-button slot="icon-only" routerLink="/notificacoes" color="primary">
+            <span class="material-icons">
+                notifications_active
+            </span>
+        </ion-button>
+        <ion-button slot="icon-only" color="primary">
+            <span class="material-icons">
+                search
+            </span>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+    </ion-title>
+</ion-toolbar>
+<ion-content>
+    <ion-grid class="backgroud-azul">
+    </ion-grid>
+    <ion-grid class="box-color">
+        <ion-row>
+            <ion-col class="titulo">
+                Horários da Locação
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-content class="review">
+                        <ion-row class="row-renew">
+                            <ion-col size="4" class="icon-center">
+                                <ion-img class="img-flutu" src="assets/img/layout/flutu.png"></ion-img>
+                            </ion-col>
+                            <ion-col>
+                                <ion-row>
+                                    <ion-col>
+                                        <h4>Estrela do Lago</h4>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h4 class="price">R$ 12000,00</h4>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="box-info">
+                                    <ion-col><span class="material-icons"> place </span>Palmas - TO</ion-col>
+                                    <ion-col class="info-locacao-tipo">p/locação</ion-col>
+                                </ion-row>
+                                <ion-row class="box-info">
+                                    <ion-col><span class="material-icons"> person </span>20 Passageiros</ion-col>
+                                </ion-row>
+                                <ion-row class="horario-reserva">
+                                    <ion-col *ngIf="!horarioSelect">
+                                        <h4>Data e horários selecionados</h4>
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        Não definido
+                                    </ion-col>
+                                    <ion-col *ngIf="horarioSelect">
+                                        <h4>Data e horários selecionados</h4>
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        {{horarioSelect.startTime|date:'HH:mm'}} (Início)
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        {{horarioSelect.endTime|date:'HH:mm'}} (Fim)
+                                    </ion-col>
+                                </ion-row>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card class="calendario">
+                    <ion-card-header>
+                        <ion-row>
+                            <ion-col>
+                                <ion-card-title>Calendário de Agendamentos</ion-card-title>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <!--<ion-segment [(ngModel)]="calendar.mode">
+                            <ion-segment-button value="month">
+                                <ion-label>Month</ion-label>
+                            </ion-segment-button>
+                            <ion-segment-button value="week">
+                                <ion-label>Week</ion-label>
+                            </ion-segment-button>
+                            <ion-segment-button value="day">
+                                <ion-label>Day</ion-label>
+                            </ion-segment-button>
+                        </ion-segment>-->
+                        <!--<ion-row>
+                            <ion-col size="6">
+                                <ion-button (click)="createRandomEvents()" expand="block" fill="outline">
+                                    Add random events
+                                </ion-button>
+                            </ion-col>
+                            <ion-col size="6">
+                                <ion-button (click)="removeEvents()" expand="block" fill="outline">
+                                    Remove all events
+                                </ion-button>
+                            </ion-col>
+                        </ion-row>-->
+
+                        <ion-row class="control-calendar">
+                            <!-- Move back one screen of the slides -->
+                            <ion-col>
+                                <ion-button fill="clear" (click)="back()">
+                                    <span class="material-icons botao-calendario">
+                                        keyboard_arrow_left
+                                    </span>
+                                </ion-button>
+                                <span class="titulo-calendario">{{ viewTitle }}</span>
+                                <ion-button  fill="clear" (click)="next()">
+                                    <span class="material-icons botao-calendario">
+                                        keyboard_arrow_right
+                                    </span>
+                                </ion-button>
+                            </ion-col>
+                        </ion-row>
+
+                        <calendar
+                                [eventSource]="eventSource"
+                                [calendarMode]="calendar.mode"
+                                [currentDate]="calendar.currentDate"
+                                (onEventSelected)="onEventSelected($event)"
+                                (onTitleChanged)="onViewTitleChanged($event)"
+                                (onCurrentDateChanged)="onCurrentDateChanged($event)"
+                                startHour="6"
+                                endHour="20"
+                                step="30"
+                                startingDayWeek="1"
+                                [monthviewDisplayEventTemplate]="template"
+                                [monthviewEventDetailTemplate]="templateDetail"
+                        >
+                        </calendar>
+                        <ng-template #template let-view="view" let-row="row" let-col="col">
+                            <div [class.with-event]="view.dates[row*7+col].events.length">
+                                {{view.dates[row * 7 + col].label}}
+                                <div class="indicator-container">
+                                    <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template #templateDetail let-selectedDate="selectedDate" let-noEventsLabel="noEventsLabel">
+                            <ion-card-title class="horario-disponivel">
+                                Horários Disponíveis
+                            </ion-card-title>
+                            <ion-radio-group (ionChange)="selectHorario($event)">
+                                <ion-item class="horarios-selecao" lines="none" *ngFor="let horario of selectedDate?.events">
+                                    <ion-radio slot="start" [value]="horario"></ion-radio>
+                                    <ion-label>
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        {{horario.startTime|date:'HH:mm'}} (Início)
+
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        {{horario.endTime|date:'HH:mm'}} (Fim)
+                                    </ion-label>
+                                </ion-item>
+                            </ion-radio-group>
+                        </ng-template>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row class="botao">
+            <ion-col>
+                <ion-button type="button" color="primary" routerLink="/reserva" expand="full">Confirmar
+                    Horário
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

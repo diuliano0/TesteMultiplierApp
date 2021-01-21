@@ -1,0 +1,59 @@
+<ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary">
+            <ion-menu-button slot="icon-only"></ion-menu-button>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons class="fim-botoes" slot="end">
+        <ion-button slot="icon-only" routerLink="/notificacoes" color="primary">
+            <span class="material-icons">
+                notifications_active
+            </span>
+        </ion-button>
+        <ion-button slot="icon-only" color="primary">
+            <span class="material-icons">
+                search
+            </span>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+    </ion-title>
+</ion-toolbar>
+<ion-content>
+    <ion-grid class="backgroud-azul">
+    </ion-grid>
+    <ion-grid class="box-color">
+        <ion-row>
+            <ion-col class="titulo">
+                Meus Cartões
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-col size="4" class="icon-center">
+                                <span class="material-icons"> room </span>
+                            </ion-col>
+                            <ion-col>
+                                <h4>Cartão Inter</h4>
+                                <p>**** **** **** 0145</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-row class="botao">
+        <ion-col>
+            <ion-button type="button" color="primary" routerLink="/catao-cadastro" expand="full">
+                Novo Cartão
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

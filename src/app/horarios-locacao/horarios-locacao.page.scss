@@ -1,0 +1,179 @@
+@import "../geralscss/geral";
+
+ion-content {
+  .backgroud-azul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .box-color {
+    position: relative;
+  }
+
+  ion-card {
+
+    margin-inline: 6pt;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 16pt;
+
+    ion-card-content {
+
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 6pt;
+
+      ion-row.horario-reserva {
+        border-top: 1px solid #E5E5E5;
+        margin-top: 5pt;
+
+        h4, ion-col {
+          font-size: 7pt;
+
+          span {
+            font-size: 7pt;
+          }
+        }
+      }
+
+      .icon-center {
+        display: flex;
+        justify-content: center;
+        background: #F2F2F2;
+
+        span {
+          margin: auto 0;
+          color: #FB9B00;
+        }
+      }
+
+      h4 {
+        font-size: 9pt;
+        font-weight: 700;
+        margin: 0;
+        color: #000DC2;
+      }
+
+      h4.price {
+        text-align: right;
+      }
+
+      ion-row.box-info {
+        font-size: 7pt !important;
+
+        span {
+          font-size: 6pt !important;
+        }
+
+        ion-col.info-locacao-tipo {
+          text-align: right;
+        }
+      }
+
+      p {
+        font-size: .6rem;
+      }
+    }
+
+    ion-card-content.review {
+      ion-row.row-renew {
+        padding-top: 0;
+      }
+
+      ion-col {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  ion-card.calendario, ion-card.horarios-disponiveis {
+
+    ion-card-header {
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 6pt;
+
+      ion-row {
+        border-bottom: 1px solid #E5E5E5;
+      }
+    }
+
+    ion-card-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #002bd9;
+    }
+
+    ion-card-title.horario-disponivel {
+      margin: 15pt 0;
+    }
+
+    ion-card-content {
+      ion-col, span {
+        font-size: 8pt;
+      }
+    }
+
+  }
+
+
+  .botao {
+    ion-col {
+      padding: 0 8pt 12pt 8pt;
+
+      ion-button {
+        font-weight: 900;
+      }
+    }
+  }
+
+  .indicator-container {
+    padding-left: 0.5rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .event-indicator {
+    background: var(--ion-color-success);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    display: table-cell;
+  }
+
+  :host ::ng-deep {
+    .monthview-primary-with-event {
+      background-color: white !important;
+    }
+
+    .monthview-selected {
+      background-color: var(--ion-color-success) !important;
+    }
+  }
+
+  .with-event {
+    background-color: var(--ion-color-primary);
+    border-radius: 15px;
+  }
+
+  .control-calendar {
+    ion-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span.titulo-calendario, ion-button.botao-calendario {
+        font-size: 12pt !important;
+        font-weight: 700;
+      }
+
+      span.botao-calendario {
+        font-size: 31pt !important;
+        font-weight: 700;
+      }
+    }
+  }
+
+}

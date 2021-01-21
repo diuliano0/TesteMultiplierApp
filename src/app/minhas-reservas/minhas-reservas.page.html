@@ -1,0 +1,126 @@
+<ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary">
+            <ion-menu-button slot="icon-only"></ion-menu-button>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons class="fim-botoes" slot="end">
+        <ion-button slot="icon-only" routerLink="/notificacoes" color="primary">
+            <span class="material-icons">
+                notifications_active
+            </span>
+        </ion-button>
+        <ion-button slot="icon-only" color="primary">
+            <span class="material-icons">
+                search
+            </span>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+    </ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <ion-grid class="backgroud-azul">
+    </ion-grid>
+    <ion-grid class="box-color">
+        <ion-row>
+            <ion-col class="titulo">
+                Minhas Reservas
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card class="card-review">
+                    <ion-card-content class="review">
+                        <ion-row class="row-renew" (click)="changeClass(buttonspan)">
+                            <ion-col size="4" class="icon-center">
+                                <ion-img class="img-flutu" src="assets/img/layout/flutu.png"></ion-img>
+                                <div class="categoria"> Flutuante</div>
+                            </ion-col>
+                            <ion-col>
+                                <ion-row>
+                                    <ion-col>
+                                        <h4>Estrela do Lago</h4>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h4 class="price">R$ 12000,00</h4>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="box-info">
+                                    <ion-col><span class="material-icons"> place </span>Palmas - TO</ion-col>
+                                    <ion-col class="info-locacao-tipo">p/locação</ion-col>
+                                </ion-row>
+                                <ion-row class="box-info">
+                                    <ion-col><span class="material-icons"> person </span>20 Passageiros</ion-col>
+                                    <ion-col class="box-info-status">
+                                        <span class="status-reserva">Reservada</span>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="text-ajust">
+                                    <ion-col size="11">
+                                        <p>
+                                            Flutuantes com banheiro, churrasqueira, extintores, uma completa e segura
+                                            estrutura cuidadosamente pensado para levar você ao melhor
+                                            passeio náutico...
+                                        </p>
+                                    </ion-col>
+                                    <ion-col class="button-colapsed" size="1">
+                                        <span #buttonspan class="material-icons">
+                                          expand_less
+                                        </span>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-col>
+                        </ion-row>
+                        <app-expandable expandHeight="100%" [expanded]="item.expanded">
+                            <ion-row class="box-detail">
+                                <ion-col size="4" class="icon-center">
+                                    <span class="material-icons"> alarm </span>
+                                </ion-col>
+                                <ion-col>
+                                    <h4>Data / Horários</h4>
+                                    <p>
+                                        <b>14/10/2020</b> <br/>
+                                        <b>10h:00</b> (Entrada) | <b>14h:00</b> (Saída)
+                                    </p>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="box-detail">
+                                <ion-col size="4" class="icon-center">
+                                    <span class="material-icons"> home_repair_service </span>
+                                </ion-col>
+                                <ion-col>
+                                    <h4>Serviços Adicionais</h4>
+                                    <p>
+                                        Música as vivo (+ R$350,00), Fotógrafo (+ R$200,00)
+                                    </p>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="box-detail">
+                                <ion-col size="4" class="icon-center">
+                                    <span class="material-icons"> credit_card </span>
+                                </ion-col>
+                                <ion-col>
+                                    <h4>Pagamento</h4>
+                                    <p>
+                                        Cartão de Crédito<br/>
+                                        3x Parcelas
+                                    </p>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="botao">
+                                <ion-col>
+                                    <ion-button type="button" color="danger" (click)="cancelarReserva()"
+                                                expand="full">Cancelar
+                                    </ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </app-expandable>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

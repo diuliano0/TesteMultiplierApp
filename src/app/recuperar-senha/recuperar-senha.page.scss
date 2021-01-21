@@ -1,0 +1,115 @@
+ion-content {
+
+  .header-login {
+    background: #002BD9;
+    height: 119pt;
+    display: flex;
+
+    .header-row {
+      align-items: center;
+      margin: 0 auto;
+
+      .img-logo {
+        width: 74pt;
+      }
+
+      .voltar {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        span {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+  }
+
+  .alert-msg {
+    padding: 0;
+    display: flex;
+    background: #F2F2F2;
+
+    span.material-icons {
+      color: #F9AA33;
+      font-size: 2.3rem;
+    }
+
+    ion-icon {
+      font-size: 2.5em !important;
+    }
+
+    ion-col.icon-ajuste {
+      text-align: right;
+    }
+
+    ion-row {
+      align-items: center;
+
+      ion-col {
+        h4 {
+          color: #002BD9;
+          font-weight: bold;
+          font-size: 0.8em;
+          margin: 14pt 0 0 0;
+        }
+
+        p {
+          margin: 5pt 0 15pt 0;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+
+  .form-login {
+    margin-top: 26pt;
+
+    form {
+      margin: 0 auto;
+
+      ion-label {
+        color: #002BD9;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      .error-message{
+        margin: 0;
+        color: #ff514c;
+      }
+
+      ion-item {
+        --padding-start: 0;
+        margin: 16pt 0;
+      }
+
+      ion-button {
+        margin: 21pt 0 0 0;
+        width: 236pt;
+      }
+
+      ion-button.botao-cadastrar {
+        --ion-color-base: #FFFFF !important;
+        --ion-color-contrast: #002BD9 !important;
+
+        span {
+          color: #002BD9 !important;
+        }
+
+        border: 1px #002BD9 solid;
+      }
+
+      .esqueceu-senha {
+        margin-top: 20pt;
+
+        a {
+          margin: 0 auto;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+}

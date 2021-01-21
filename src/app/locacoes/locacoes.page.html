@@ -1,0 +1,67 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-button color="primary">
+      <ion-menu-button slot="icon-only"></ion-menu-button>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons class="fim-botoes" slot="end">
+    <ion-button slot="icon-only" routerLink="/notificacoes" color="primary">
+            <span class="material-icons">
+                notifications_active
+            </span>
+    </ion-button>
+    <ion-button slot="icon-only" color="primary">
+            <span class="material-icons">
+                search
+            </span>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>
+    <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+  </ion-title>
+</ion-toolbar>
+<ion-content>
+  <ion-grid class="backgroud-azul">
+  </ion-grid>
+  <ion-grid class="box-color">
+    <ion-row>
+      <ion-col class="titulo">
+        Lista de locações
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <ion-img class="img-flutu" src="assets/img/layout/flutu.png"></ion-img>
+                <div class="categoria"> Flutuante</div>
+              </ion-col>
+              <ion-col>
+                <ion-row>
+                  <ion-col>
+                    <h4>Estrela do Lago</h4>
+                  </ion-col>
+                  <ion-col>
+                    <h4 class="price">R$ 12000,00</h4>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="box-info">
+                  <ion-col>Palmas - TO</ion-col>
+                  <ion-col class="info-locacao-tipo">p/locação</ion-col>
+                </ion-row>
+                <ion-row class="box-info">
+                  <ion-col><span class="material-icons"> person </span>20 Passageiros</ion-col>
+                </ion-row>
+                <ion-row class="button-reservar">
+                  <ion-button type="button" color="warning" routerLink="/locacao-detalhe" expand="full">Detalhe</ion-button>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

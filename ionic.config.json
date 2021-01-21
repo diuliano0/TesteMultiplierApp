@@ -1,0 +1,7 @@
+{
+  "name": "LocacaoFlutuApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

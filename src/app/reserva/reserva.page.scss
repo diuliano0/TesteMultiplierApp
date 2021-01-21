@@ -1,0 +1,146 @@
+@import "../geralscss/geral";
+
+
+ion-content{
+
+  ion-select{
+    text-wrap: normal !important;
+  }
+
+  ion-row.review-price{
+    text-align: center;
+    margin-top: 12pt;
+    margin-bottom: 12pt;
+    font-size: 13pt;
+    color: #747474;
+    font-weight: 700;
+    ion-col.colprice{
+      border-left: 1pt solid #747474;
+    }
+  }
+
+  ion-card.card-review {
+
+    margin-inline: 6pt;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 16pt;
+
+    .categoria{
+      position: absolute;
+      top: 15pt;
+      background: #002bd9;
+      left: 0;
+      padding: 2pt;
+      color: #FDFDFD;
+      font-size: .6rem;
+    }
+
+    ion-card-content {
+
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 6pt;
+
+      ion-row.horario-reserva {
+        border-top: 1px solid #E5E5E5;
+        margin-top: 5pt;
+
+        h4, ion-col {
+          font-size: 7pt;
+
+          span {
+            font-size: 7pt;
+          }
+        }
+      }
+
+      .icon-center {
+        display: flex;
+        justify-content: center;
+        background: #F2F2F2;
+
+        span {
+          margin: auto 0;
+          color: #FB9B00;
+        }
+      }
+
+      h4 {
+        font-size: 9pt;
+        font-weight: 700;
+        margin: 0;
+        color: #000DC2;
+      }
+
+      h4.price {
+        text-align: right;
+      }
+
+      ion-row.box-info {
+        font-size: 7pt !important;
+
+        span {
+          font-size: 6pt !important;
+        }
+
+        ion-col.info-locacao-tipo {
+          text-align: right;
+        }
+      }
+
+      p {
+        font-size: .6rem;
+      }
+    }
+
+    ion-card-content.review {
+      ion-row.row-renew {
+        padding-top: 0;
+      }
+
+      ion-col {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  ion-card.card-horario {
+    margin-inline: 6pt;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 2pt;
+    ion-card-content {
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 6pt;
+      ion-col {
+        border-left: 1pt solid #f2f2f2;
+        padding-left: 6px;
+        margin-left: 6px;
+      }
+      .icon-center{
+        display: flex;
+        justify-content: center;
+        background: #F2F2F2;
+        span{
+          margin: auto 0;
+          color: #BDBDBD;
+        }
+      }
+      h4{
+        color: #002BD9;
+        font-size: 9pt;
+        font-weight: 700;
+        margin-bottom: 7pt;
+        border-bottom: 1pt solid #F2F2F2;
+        padding-bottom: 5pt;
+      }
+      p{
+        font-size: .6rem;
+      }
+    }
+  }
+
+}

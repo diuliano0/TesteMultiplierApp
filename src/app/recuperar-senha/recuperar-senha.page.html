@@ -1,0 +1,43 @@
+<ion-content>
+  <ion-grid class="header-login">
+    <ion-row class="header-row">
+      <ion-button type="submit" class="voltar" (click)="voltar()" >
+                <span class="material-icons">
+                    arrow_back
+                </span>
+      </ion-button>
+      <ion-col class="header-logo">
+        <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="alert-msg">
+    <ion-row>
+      <ion-col class="icon-ajuste" size="2">
+                <span class="material-icons">
+                    new_releases
+                </span>
+      </ion-col>
+      <ion-col>
+        <h4>Opss! com problemas com seu acesso?</h4>
+        <p>Com o Lookei você poderá realizar reservas de embarcações diretamente diretamente pelo App, de forma
+          rápida e fácil.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-grid class="form-login">
+        <ion-row>
+            <form [formGroup]="recuperarForm" (submit)="recuperar(recuperarForm.value)">
+                <ion-item>
+                    <ion-label position="floating">E-mail</ion-label>
+                    <ion-input type="text" name="login" formControlName="email" [class.invalid]="!recuperarForm.controls.email.valid && recuperarForm.controls.email.dirty"></ion-input>
+                </ion-item>
+                <!-- Name Validation Message  -->
+                <div class="error-message" *ngIf="!recuperarForm.controls.email.valid  && recuperarForm.controls.email.dirty">
+                    <p>E-mail é obrigatório.</p>
+                </div>
+                <ion-button type="submit" color="primary" expand="full">Recuperar</ion-button>
+            </form>
+        </ion-row>
+    </ion-grid>
+</ion-content>

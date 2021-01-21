@@ -1,0 +1,96 @@
+@import "../geralscss/geral";
+ion-content{
+  ion-card {
+    margin-inline: 6pt;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 2pt;
+    .categoria{
+      position: absolute;
+      top: 15pt;
+      background: #002bd9;
+      left: 0;
+      padding: 2pt;
+      color: #FDFDFD;
+      font-size: .6rem;
+    }
+    ion-card-content {
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 6pt;
+      ion-row.button-reservar{
+        justify-content: flex-end;
+      }
+      ion-button{
+        font-size: .8rem;
+        --ion-color-base: #FB9B00 !important;
+        height: 19pt;
+      }
+      .icon-center{
+        display: flex;
+        justify-content: center;
+        background: #F2F2F2;
+        span{
+          margin: auto 0;
+          color: #FB9B00;
+        }
+      }
+      h4{
+        color: #002BD9;
+        font-size: .7rem;
+        font-weight: 700;
+        margin: 0;
+
+      }
+      h4.price{
+        text-align: right;
+      }
+      ion-row.box-info{
+        font-size: .6rem !important;
+        span{
+          font-size: .6rem !important;
+        }
+        ion-col.info-locacao-tipo{
+          text-align: right;
+        }
+      }
+      p{
+        font-size: .6rem;
+      }
+    }
+  }
+  .alert-msg {
+    padding: 0;
+    display: flex;
+    background: #F2F2F2;
+    align-items: center;
+
+    span.material-icons {
+      color: #F9AA33;
+      font-size: 2.3rem;
+    }
+
+    ion-icon {
+      font-size: 2.5em !important;
+    }
+
+    ion-col.icon-ajuste {
+      text-align: right;
+    }
+
+
+    ion-col {
+      h4 {
+        color: #002BD9;
+        font-weight: bold;
+        font-size: 0.8em;
+        margin: 14pt 0 0 0;
+      }
+
+      p {
+        margin: 5pt 0 15pt 0;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

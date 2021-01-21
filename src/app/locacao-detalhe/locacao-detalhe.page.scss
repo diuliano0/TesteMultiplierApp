@@ -1,0 +1,114 @@
+@import "../geralscss/geral";
+
+ion-content{
+  .box-color{
+    .img-flutu{
+      margin: 6pt;
+    }
+    .categoria{
+      position: absolute;
+      top: 15pt;
+      background: #FB9B00;
+      left: 0;
+      padding: 4pt;
+      color: #333333;
+      font-size: 11pt;
+      font-weight: 600;
+    }
+  }
+  ion-card.comodidades{
+    ion-card-header{
+      border-bottom: 1px solid #E5E5E5;
+    }
+    ion-card-content{
+      margin-top: 15pt;
+      margin-bottom: 4pt;
+      ion-col, span{
+        font-size: 8pt !important;
+      }
+      ion-col{
+        padding: 11px 0;
+      }
+    }
+  }
+  ion-card{
+    margin-inline: 6pt;
+    border-radius: 0;
+    margin-top: 0;
+
+    ion-card-title{
+      font-size: 18pt;
+      font-weight: 700;
+      color: #002bd9;
+    }
+
+    ion-card-header{
+      padding-inline: 6pt;
+      padding-top: 6pt;
+      padding-bottom: 0;
+      .price{
+        display: flex;
+        align-items: flex-end;
+        font-size: 12pt;
+        font-weight: 800;
+        justify-content: flex-end;
+      }
+    }
+
+    ion-card-content{
+      padding-inline: 6pt;
+      padding-top: 0;
+      padding-bottom: 6pt;
+
+      .caracteristicas{
+        margin: 11pt 0;
+        border-top: 1px solid #E5E5E5;
+        padding: 7pt 0;
+        border-bottom: 1px solid #E5E5E5;
+        span.material-icons, ion-col{
+          font-size: 7pt !important;
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+      ion-row.descricao{
+        text-align: justify;
+      }
+      ion-button{
+        //--ion-color-base: #FB9B00 !important;
+        height: 27pt;
+        margin-right: 0;
+        margin-left: 0;
+        font-weight: 900;
+      }
+
+      ion-col{
+        padding: 0;
+        font-size: 10pt !important;
+        span.material-icons{
+          font-size: 11pt;
+        }
+        span.horarios{
+          background: #6FE5A0;
+          color: #FDFDFD;
+          padding: 1pt 5pt;
+          font-weight: 700;
+        }
+      }
+
+      ion-col.texto-horario{
+        text-align: right;
+      }
+
+    }
+
+  }
+  .botao{
+    ion-col{
+      padding: 0 8pt 12pt 8pt;
+      ion-button{
+        font-weight: 900;
+      }
+    }
+  }
+}

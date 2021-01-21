@@ -1,0 +1,43 @@
+ion-toolbar{
+  --opacity: 1;
+  margin-bottom: -1px !important;
+  .img-logo {
+    width: 54pt;
+    margin: 0 auto;
+  }
+  ion-buttons {
+    ion-button{
+      ion-menu-button{
+        --color: #fff;
+      }
+    }
+  }
+  ion-buttons.fim-botoes{
+    span{
+      color: #FDFDFD;
+    }
+  }
+}
+ion-content {
+  height: 100% !important;
+
+  .box-color {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    .titulo{
+      color: #FFB446;
+      font-size: 16pt;
+      font-weight: 700;
+      margin: 12pt 6pt 4pt 6pt;
+    }
+  }
+
+  .backgroud-azul {
+    background: #002BD9;
+    height: 86pt;
+  }
+}

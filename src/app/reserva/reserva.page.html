@@ -1,0 +1,184 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-button color="primary">
+      <ion-menu-button slot="icon-only"></ion-menu-button>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons class="fim-botoes" slot="end">
+    <ion-button slot="icon-only" routerLink="/notificacoes" color="primary">
+            <span class="material-icons">
+                notifications_active
+            </span>
+    </ion-button>
+    <ion-button slot="icon-only" color="primary">
+            <span class="material-icons">
+                search
+            </span>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>
+    <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+  </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid class="backgroud-azul">
+  </ion-grid>
+  <ion-grid class="box-color">
+    <ion-row>
+      <ion-col class="titulo">
+        Reserva
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-review">
+          <ion-card-content class="review">
+            <ion-row class="row-renew">
+              <ion-col size="4" class="icon-center">
+                <ion-img class="img-flutu" src="assets/img/layout/flutu.png"></ion-img>
+
+                <div class="categoria"> Flutuante</div>
+              </ion-col>
+              <ion-col>
+                <ion-row>
+                  <ion-col>
+                    <h4>Estrela do Lago</h4>
+                  </ion-col>
+                  <ion-col>
+                    <h4 class="price">R$ 12000,00</h4>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="box-info">
+                  <ion-col><span class="material-icons"> place </span>Palmas - TO</ion-col>
+                  <ion-col class="info-locacao-tipo">p/locação</ion-col>
+                </ion-row>
+                <ion-row class="box-info">
+                  <ion-col><span class="material-icons"> person </span>20 Passageiros</ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-horario">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <span class="material-icons"> alarm </span>
+              </ion-col>
+              <ion-col>
+                <h4>Data / Horário</h4>
+                <p>
+                  <b>14/10/2020</b><br>
+                  <b>10h:00</b> (Início) | <b>14h:00</b> (Fim)
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-horario">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <span class="material-icons"> home_repair_service </span>
+              </ion-col>
+              <ion-col>
+                <h4>Serviço Adicionais</h4>
+                <ion-select multiple="true" placeholder="Selecione" cancelText="Nah" okText="Okay!">
+                  <ion-select-option value="bacon">Buffet</ion-select-option>
+                  <ion-select-option value="olives">Música</ion-select-option>
+                  <ion-select-option value="xcheese">Garçon</ion-select-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-horario">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <span class="material-icons"> attach_money </span>
+              </ion-col>
+              <ion-col>
+                <h4>Pagamento</h4>
+                  <ion-select placeholder="Selecione" cancelText="Nah" okText="Okay!">
+                    <ion-select-option value="bacon">Dinheiro</ion-select-option>
+                    <ion-select-option value="olives">Cartão de Crédito</ion-select-option>
+                    <ion-select-option value="xcheese">Boleto</ion-select-option>
+                  </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-horario">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <span class="material-icons"> payments </span>
+              </ion-col>
+              <ion-col>
+                <h4>Cartão</h4>
+                <p>
+                  **** **** **** <b>0689</b><br>
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-horario">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4" class="icon-center">
+                <span class="material-icons"> credit_card </span>
+              </ion-col>
+              <ion-col>
+                <h4>Parcelamento</h4>
+                <ion-select placeholder="Selecione" cancelText="Nah" okText="Okay!">
+                  <ion-select-option value="bacon">1x</ion-select-option>
+                  <ion-select-option value="olives">2x</ion-select-option>
+                  <ion-select-option value="xcheese">3x</ion-select-option>
+                  <ion-select-option value="peppers">4x</ion-select-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="review-price" >
+      <ion-col>
+        Valor da Locação
+      </ion-col>
+      <ion-col class="colprice">
+        R$ 1.400,00
+      </ion-col>
+    </ion-row>
+    <ion-row class="botao">
+      <ion-col>
+        <ion-button type="button" color="primary" (click)="reservar()" expand="full">
+          Confirmar Reserva
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

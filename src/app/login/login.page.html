@@ -1,0 +1,53 @@
+<ion-content>
+    <ion-grid class="header-login">
+        <ion-row class="header-row">
+            <ion-col class="header-logo">
+                <ion-img class="img-logo" src="assets/img/layout/logo.png"></ion-img>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid class="alert-msg">
+        <ion-row>
+            <ion-col class="icon-ajuste" size="2">
+                <span class="material-icons">
+                    new_releases
+                </span>
+            </ion-col>
+            <ion-col>
+                <h4>A facilidade que você merece! </h4>
+                <p>Localize e reserve de forma rápida e fácil flutuantes, lanchas, jet-ski e muitos outros itens para
+                    locações.</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid class="form-login">
+        <ion-row>
+            <form [formGroup]="signInForm" (submit)="doLogin(signInForm.value)">
+                <ion-item>
+                    <ion-label position="floating">Usuário</ion-label>
+                    <ion-input type="text" name="login" formControlName="username" [class.invalid]="!signInForm.controls.username.valid && signInForm.controls.username.dirty"></ion-input>
+                </ion-item>
+                <!-- Name Validation Message  -->
+                <div class="error-message"
+                     *ngIf="!signInForm.controls.username.valid  && signInForm.controls.username.dirty">
+                    <p>Login é obrigatório.</p>
+                </div>
+                <ion-item>
+                    <ion-label position="floating">Senha</ion-label>
+                    <ion-input type="password" name="senha" formControlName="password"
+                               [class.invalid]="!signInForm.controls.password.valid && signInForm.controls.password.dirty"></ion-input>
+                </ion-item>
+                <!-- Name Validation Message  -->
+                <div class="error-message"
+                     *ngIf="!signInForm.controls.password.valid  && signInForm.controls.password.dirty">
+                    <p>Senha é obrigatória.</p>
+                </div>
+                <ion-button type="submit" color="primary" expand="full">Login</ion-button>
+                <ion-button type="button" (click)="goToCadastro()" class="botao-cadastrar" color="light" expand="full">Cadastrar</ion-button>
+                <ion-row class="esqueceu-senha">
+                  <a (click)="goToRecuperarSenha()">Esqueceu sua senha?</a>
+                </ion-row>
+            </form>
+        </ion-row>
+    </ion-grid>
+</ion-content>
